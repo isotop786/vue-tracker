@@ -8,7 +8,7 @@
   
     <button
     v-if="stats.Country" @click="clearCountry"
-     class="w-full mb-6 bg-green-700 text-white rounded p-3 focus:outline-none hover:bg-green-500 hover:text-black">Clear Country</button>
+     class="w-full mb-6 bg-blue-700 text-white rounded p-3 focus:outline-none hover:bg-blue-500 hover:text-black">Clear Country</button>
           
      </main>
     <main v-else class="flex flex-col align-center justify-center text-center">

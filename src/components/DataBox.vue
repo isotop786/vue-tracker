@@ -1,38 +1,56 @@
 <template>
 
-<div class="grid md:grid-cols-2 gap-4">
-    <div class="flex flex-col shadow-md bg-blue-100 p-6 text-center rounded">
-        <h3 class="text-3xl text-blue-900 font-bold mb-4 text-center rounded">
+<div class="grid md:grid-cols-3 gap-4">
+    <div class="flex flex-col shadow-md bg-yellow-500 p-2 md:p-6 text-center rounded">
+        <h3 class="text-3xl text-white font-bold mb-4 text-center rounded">
             Comfimed Cases
         </h3>
         <div class="text-2xl mb-4">
-            <span class="text-center font-bold">
-               New Cases: {{stats.NewConfirmed}}
+            <span class="text-center font-bold text-white">
+               New : {{stats.NewConfirmed}}
             </span>
         </div>
 
         <div class="text-2xl mb-4">
-            <span class="text-center font-bold">
-                Total Cases : {{stats.TotalConfirmed}}
+            <span class="text-center font-bold text-white">
+                Total  : {{stats.TotalConfirmed}}
             </span>
         </div>
     </div>
 
     <!-- Deaths -->
-    <div class="shadow-md bg-red-500 p-6 text-center rounded text-">
+    <div class="shadow-md bg-red-500 p-2 md:p-6 text-center rounded ">
         <h3 class="text-3xl text-white font-bold mb-4 text-center rounded">
             Deaths 
         </h3>
         <div class="text-2xl mb-4">
             <span class="text-center font-bold text-white">
-                New Death: {{stats.NewDeaths}}
+                New : {{stats.NewDeaths}}
             </span>
         </div>
         <div class="text-2xl mb-4">
             <span class="text-center font-bold text-white">
-                Total Death: {{stats.TotalDeaths}}
+                Total : {{stats.TotalDeaths}}
             </span>
         </div>
+    </div>
+
+    <!-- Recover -->
+
+    <div class="shadow-md bg-green-500 p-2 md:p-6 text-center rounded text-white">
+        <h3 class="text-3xl text-white font-bold mb-4 text-center rounded">Recovered</h3>
+        <div class="text-2xl mb-4">
+            <span class="text-center font-bold text-white">
+                New: {{stats.NewRecovered}}
+            </span>
+        </div>
+
+        <div class="text-2xl mb-4">
+            <span class="text-center font-bold text-white">
+                Total: {{stats.TotalRecovered}}
+            </span>
+        </div>
+        
     </div>
 
 </div>

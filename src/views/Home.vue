@@ -5,8 +5,11 @@
       <DataBox :stats="stats"/>
 
       <CountrySelect @get-country="setCountry" :countries="data.Countries" />
-     
-      
+  
+    <button
+    v-if="stats.Country" @click="clearCountry"
+     class="w-full mb-6 bg-green-700 text-white rounded p-3 focus:outline-none hover:bg-green-500 hover:text-black">Clear Country</button>
+          
      </main>
     <main v-else class="flex flex-col align-center justify-center text-center">
       <div class="text-center text-gray-400 mb-4 ">
@@ -57,6 +60,12 @@ export default {
       // alert(country.Country)
       this.stats = country;
       this.title = country.Country
+    },
+    async clearCountry(){
+      this.data = null 
+      this.data = await this.fetchApi();
+      this.stats = await this.data.Global
+      this.title ='Global'
     }
   },
   async created(){

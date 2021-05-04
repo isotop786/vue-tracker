@@ -2,7 +2,7 @@
 
      
      <select @change="onChange()" v-model="selected"
-    class="form-select w-full block p-3 my-10 border rounded"
+    class="form-select w-full block p-3 my-2 md:my-10 border rounded"
      > 
        <option value="0">Select Country</option>
        <option class="w-4" v-for="c in countries" :key="c.ID" :value="c.ID">{{c.Country}}</option>

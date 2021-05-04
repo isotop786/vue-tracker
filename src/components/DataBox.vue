@@ -45,7 +45,7 @@
             </span>
         </div>
 
-        <div class="text-2xl mb-4">
+        <div class="text-2xl md:mb-4">
             <span class="text-center font-bold text-white">
                 Total: {{stats.TotalRecovered}}
             </span>

@@ -5,11 +5,12 @@
       <DataBox :stats="stats"/>
 
       <CountrySelect @get-country="setCountry" :countries="data.Countries" />
-  
+    
     <button
     v-if="stats.Country" @click="clearCountry"
      class="w-full mb-6 bg-blue-700 text-white rounded p-3 focus:outline-none hover:bg-blue-500 hover:text-black">Clear Country</button>
-          
+           
+    
      </main>
     <main v-else class="flex flex-col align-center justify-center text-center">
       <div class="text-center text-gray-400 mb-4 ">
@@ -27,12 +28,14 @@
 import DataTime from '../components/DataTime';
 import DataBox from '@/components/DataBox';
 import CountrySelect from '@/components/CountrySelect';
+import Footer from '@/components/Footer'
 export default {
   name: 'Home',
   components: {
     DataTime,
     DataBox,
-    CountrySelect
+    CountrySelect,
+    Footer
   },
   data(){
     return{
@@ -74,7 +77,7 @@ export default {
     this.stats = await this.data.Global
     this.date = await this.data.Date
 
-   console.log(this.data)
+  //  console.log(this.data)
   }
 }
 </script>
